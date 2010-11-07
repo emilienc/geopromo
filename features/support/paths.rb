@@ -16,6 +16,14 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+    
+     #add the devise path to test authentication
+      when /register/
+        '/users/sign_up'
+      when /login/
+        '/users/sign_in'
+      when /logout/
+        '/users/sign_out'
 
     else
       begin
