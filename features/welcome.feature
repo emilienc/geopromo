@@ -1,7 +1,7 @@
 Feature: Welcome
   In order to follow my diet
   As a big guy
-  I want to be simply welcome and to authenticate
+  I want to be simply welcome, and to authenticate
 
 Scenario: Simple welcome
   Given I am not logged in
@@ -12,6 +12,9 @@ Scenario: Simple welcome
   
 
   
-
+Scenario: With promotions
+  Given I am not logged in
+  When I go to the homepage
+  Then I should see "Les dernières promotions"
 
 

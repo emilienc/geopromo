@@ -1,1 +1,22 @@
 <h1>Bienvenue sur Geopromo</h1>
+
+<h2>Les dernières promotions</h2>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Description</th>
+    <th>Debut</th>
+    <th>Fin</th>
+  </tr>
+  <% for promotion in @promotions %>
+    <tr>
+      <td><%= promotion.user_id %></td>
+      <td><%= promotion.description %></td>
+      <td><%= promotion.debut %></td>
+      <td><%= promotion.fin %></td>
+      <td><%= link_to "Show", promotion %></td>
+      <td><%= link_to "Edit", edit_promotion_path(promotion) %></td>
+      <td><%= link_to "Destroy", promotion, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

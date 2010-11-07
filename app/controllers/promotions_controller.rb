@@ -1,6 +1,6 @@
 class PromotionsController < ApplicationController
   def index
-    @promotions = Promotion.all
+    @promotions = current_user.promotions
   end
   
   def show
@@ -12,7 +12,9 @@ class PromotionsController < ApplicationController
   end
   
   def create
+    
     @promotion = Promotion.new(params[:promotion])
+    @promotion.user = current_user
     if @promotion.save
       flash[:notice] = "Successfully created promotion."
       redirect_to @promotion

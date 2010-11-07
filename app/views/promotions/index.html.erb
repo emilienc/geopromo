@@ -9,7 +9,7 @@
   </tr>
   <% for promotion in @promotions %>
     <tr>
-      <td><%= promotion.user_id %></td>
+      <td><%= promotion.user.email %></td>
       <td><%= promotion.description %></td>
       <td><%= promotion.debut %></td>
       <td><%= promotion.fin %></td>
