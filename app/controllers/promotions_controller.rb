@@ -9,7 +9,10 @@ class PromotionsController < ApplicationController
   def list
     @lat=params[:lat]
     @lng=params[:lng]
-    event = Event.create :lat=>@lat,:lng=>@lng
+    p = Geocode.new
+    p.latitude = @lat
+    p.longitude = @lng
+    @promotions = Promotion.origin(p, :within => 50)
   end
   
   def show

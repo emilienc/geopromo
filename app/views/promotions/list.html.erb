@@ -1,1 +1,23 @@
 Vous avez demandé les promotions dans un rayon de 10 m de <%=@lat%> , <%=@lng%>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Description</th>
+    <th>Debut</th>
+    <th>Fin</th>
+  </tr>
+  <% for promotion in @promotions %>
+    <tr>
+      <td><%= promotion.user.email %></td>
+      <td><%= promotion.description %></td>
+      <td><%= promotion.adresse %></td>
+      <td><%= promotion.geocode.latitude %></td>
+	  <td><%= promotion.geocode.longitude %></td>
+      <td><%= promotion.debut %></td>
+      <td><%= promotion.fin %></td>
+     
+      <td><%= link_to "Destroy", promotion, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
