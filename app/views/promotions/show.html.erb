@@ -1,0 +1,24 @@
+<% title "Promotion" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @promotion.user_id %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @promotion.description %>
+</p>
+<p>
+  <strong>Debut:</strong>
+  <%= @promotion.debut %>
+</p>
+<p>
+  <strong>Fin:</strong>
+  <%= @promotion.fin %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_promotion_path(@promotion) %> |
+  <%= link_to "Destroy", @promotion, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", promotions_path %>
+</p>

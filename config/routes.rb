@@ -1,4 +1,6 @@
 Geopromo::Application.routes.draw do
+  resources :promotions
+
   get "welcome/index"
 
   devise_for :users

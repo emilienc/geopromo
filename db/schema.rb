@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101107091537) do
+ActiveRecord::Schema.define(:version => 20101107101824) do
+
+  create_table "promotions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "description"
+    t.date     "debut"
+    t.date     "fin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

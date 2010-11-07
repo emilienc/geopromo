@@ -1,0 +1,20 @@
+<%= form_for @promotion do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :debut %><br />
+    <%= f.date_select :debut %>
+  </p>
+  <p>
+    <%= f.label :fin %><br />
+    <%= f.date_select :fin %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

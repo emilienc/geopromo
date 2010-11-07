@@ -18,3 +18,4 @@ group :development, :test do
     gem 'spork'
     gem 'factory_girl_rails'
 end
+gem "mocha", :group => :test

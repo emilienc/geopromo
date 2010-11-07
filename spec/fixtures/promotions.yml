@@ -1,0 +1,11 @@
+one:
+  user_id: 1
+  description: MyString
+  debut: 2010-11-07
+  fin: 2010-11-07
+
+two:
+  user_id: 1
+  description: MyString
+  debut: 2010-11-07
+  fin: 2010-11-07
