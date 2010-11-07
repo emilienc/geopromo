@@ -1,4 +1,7 @@
 class PromotionsController < ApplicationController
+  
+  before_filter :authenticate_user! 
+  
   def index
     @promotions = current_user.promotions
   end
