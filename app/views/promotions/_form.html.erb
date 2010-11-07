@@ -6,11 +6,27 @@
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.label :debut %><br />
-    <%= f.date_select :debut %>
+    <%= f.label :rue %><br />
+    <%= f.text_field :street %>
   </p>
   <p>
-    <%= f.label :fin %><br />
+    <%= f.label :ville %><br />
+    <%= f.text_field :locality %>
+  </p>
+  <p>
+    <%= f.label 'code postal' %><br />
+    <%= f.text_field :postal_code %>
+  </p>
+<p>
+    <%= f.label :pays %><br />
+    <%= f.text_field :country %>
+  </p>
+ <p>
+    <%= f.label 'début' %><br />
+    <%= f.date_select :debut %>
+  </p>
+ <p>
+    <%= f.label 'fin' %><br />
     <%= f.date_select :fin %>
   </p>
   <p><%= f.submit %></p>
