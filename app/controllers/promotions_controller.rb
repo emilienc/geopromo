@@ -1,9 +1,15 @@
 class PromotionsController < ApplicationController
   
-  before_filter :authenticate_user! 
+  before_filter :authenticate_user!, :except => [:list]
   
   def index
     @promotions = current_user.promotions
+  end
+  
+  def list
+    @lat=params[:lat]
+    @lng=params[:lng]
+    event = Event.create :lat=>@lat,:lng=>@lng
   end
   
   def show

@@ -1,4 +1,6 @@
 Geopromo::Application.routes.draw do
+  
+  match 'promotions/list' => 'promotions#list'
   resources :promotions
 
   get "welcome/index"
