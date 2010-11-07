@@ -6,8 +6,7 @@ development:
   reconnect: false
   database: geopromo_development
   pool: 5
-  username: root
-  password: clealizee
+  username: root  
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -20,7 +19,7 @@ test: &test
   database: geopromo_test
   pool: 5
   username: root
-  password: clealizee
+#  password: clealizee
   host: localhost
 
 production:
