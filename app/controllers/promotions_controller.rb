@@ -14,7 +14,14 @@ class PromotionsController < ApplicationController
     p = Geocode.new
     p.latitude = @lat
     p.longitude = @lng
-    @promotions = Promotion.origin(p, :within => 50)
+    @promotions = Promotion.origin(p, :within => 500)
+    respond_to do |format|
+      format.html
+      format.plist { 
+
+        render :plist => @promotions
+        }
+    end
   end
   
   def show
