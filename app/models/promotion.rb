@@ -8,4 +8,8 @@ class Promotion < ActiveRecord::Base
     [street,locality,postal_code,country].join(' ')
   end
   
+  def to_plist
+  attributes.to_plist
+  end
+  
 end

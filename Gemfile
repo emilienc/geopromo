@@ -6,6 +6,7 @@ gem 'rails', '>=3.0.1'
 gem 'pg', '=0.9.0'
 gem 'devise'
 gem "acts_as_geocodable"
+gem 'plist'
 
 
 # Bundle gems for the local environment. Make sure to

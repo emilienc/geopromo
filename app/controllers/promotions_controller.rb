@@ -2,7 +2,7 @@
 
 class PromotionsController < ApplicationController
   
-  before_filter :authenticate_user!, :except => [:list]
+  before_filter :authenticate_user!, :except => [:list,:show]
   
   def index
     @promotions = current_user.promotions
@@ -19,6 +19,10 @@ class PromotionsController < ApplicationController
   
   def show
     @promotion = Promotion.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.plist { render :plist => @product }
+    end
   end
   
   def new
