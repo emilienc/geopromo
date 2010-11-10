@@ -1,34 +1,35 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: geopromo_development
   pool: 5
-  username: root  
+  username: rails 
+  password: clealizee
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: geopromo_test
   pool: 5
-  username: root
-#  password: clealizee
+  username: rails
+  password: clealizee
   host: localhost
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: geopromo_prod
   pool: 5
-  username: root
+  username: rails
   password: clealizee
   host: localhost
 

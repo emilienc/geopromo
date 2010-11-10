@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '>=3.0.1'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg', '=0.9.0'
 gem 'devise'
 gem "acts_as_geocodable"
 
