@@ -5,11 +5,22 @@ class Promotion < ActiveRecord::Base
   acts_as_geocodable :units => :kilometers
   
   def adresse
-    [street,locality,postal_code,country].join(' ')
+    [street,postal_code,locality,country].join(' ')
   end
   
-  def to_plist
-  attributes.to_plist
+  def to_plist(envelope=true)
+    Plist::Emit.dump(self,envelope)
+  end
+  
+  def to_plist_node
+   "<dict>"+
+      "<key>"+"id"+"</key>"+
+      "<string>"+self.id.to_s+"</string>"+
+      "<key>"+"description"+"</key>"+
+      "<string>"+self.description+"</string>"+
+      "<key>"+"adresse"+"</key>"+
+      "<string>"+self.adresse+"</string>"+
+  "</dict>"
   end
   
 end

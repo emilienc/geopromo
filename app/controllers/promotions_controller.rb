@@ -2,10 +2,23 @@
 
 class PromotionsController < ApplicationController
   
-  before_filter :authenticate_user!, :except => [:list,:show]
+  
+  before_filter :authenticate_user!, :except => [:index,:list,:show]
+  
+  def toplist(promos)
+    obj=[]
+    promos.each do |p|
+      obj << p.to_plist
+    end
+    obj.to_plist
+  end
   
   def index
     @promotions = current_user.promotions
+    respond_to do |format|
+      format.html
+      format.plist { render :plist => toplist(@promotions)}
+    end
   end
   
   def list
@@ -17,10 +30,7 @@ class PromotionsController < ApplicationController
     @promotions = Promotion.origin(p, :within => 500)
     respond_to do |format|
       format.html
-      format.plist { 
-
-        render :plist => @promotions
-        }
+      format.plist { render :plist => @promotions}
     end
   end
   
@@ -28,7 +38,7 @@ class PromotionsController < ApplicationController
     @promotion = Promotion.find(params[:id])
     respond_to do |format|
       format.html
-      format.plist { render :plist => @product }
+      format.plist { render :plist => @promotion }
     end
   end
   
