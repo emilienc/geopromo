@@ -1,20 +1,19 @@
 Feature: Welcome
-  In order to follow my diet
-  As a big guy
-  I want to be simply welcome, and to authenticate
+  In order to improve my business
+  As a entrepreneur
+  I want to be simply welcome, and to log or to register
 
 Scenario: Simple welcome
-  Given I am not logged in
+  Given I am not authenticated
   When I go to the homepage
-  Then I should see "Bienvenue"
-  And I should see "Connexion"
-  And I should see "Enregistrement"
+  Then I should be simply welcome
   
+Scenario: Already logged
+  Given I am authenticated
+  When I go to the homepage
+  Then I should see "Deconnexion"
 
-  
-Scenario: With promotions
-  Given I am not logged in
-  When I go to the homepage
-  Then I should see "Les dernières promotions"
+
+
 
 

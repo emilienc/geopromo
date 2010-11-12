@@ -14,10 +14,10 @@ Scenario: Creating a new account
     Then I should see "Signed in as"
 
 Scenario: Sign in
-  Given I am a new, authenticated user
+  Given I am authenticated
   Then I should see "Signed in as"
 
 Scenario: Sign out
-  Given I am a new, authenticated user
+  Given I am authenticated
   When I go to logout
   Then I should see "Signed out"

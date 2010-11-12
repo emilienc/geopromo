@@ -1,4 +1,7 @@
-Given /^I am not logged in$/ do
-  true # express the regexp above with the code you wish you had
+Then /^I should be simply welcome$/ do
+  page.should have_content "Bienvenue"
+  page.should have_content "Connexion"
+  page.should have_content "Enregistrement"
+  page.should have_content "promotions"
 end
 

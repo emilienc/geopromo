@@ -25,6 +25,7 @@ module NavigationHelpers
       when /logout/
         '/users/sign_out'
 
+
     else
       begin
         page_name =~ /the (.*) page/
