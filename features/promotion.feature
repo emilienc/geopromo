@@ -3,10 +3,15 @@ Feature: Gestion des promotions
   As a user
   I want to create and manage my promotions
 
-Scenario: show promotion
+Scenario: show only my promotions
   Given a promotion exists with description: "promotion de test"
-  And I log in successfully
+  And I am authenticated
   When I go to the promotions page
+  Then I should not see "promotion de test"
+
+Scenario: create a promotion
+  Given I am authenticated and I have created a single promotion
+  When  I go to the promotions page
   Then I should see "promotion de test"
 
 

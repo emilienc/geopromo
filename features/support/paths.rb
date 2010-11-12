@@ -24,6 +24,8 @@ module NavigationHelpers
         '/users/sign_in'
       when /logout/
         '/users/sign_out'
+      when /closer/
+        '/promotions/list.plist?lat=43.192867&lng=5.755785'
 
 
     else
