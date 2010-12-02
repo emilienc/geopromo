@@ -78,3 +78,14 @@ a {
   float: right;
   font-size: 12px;
 }
+
+#map {
+	
+  	margin: 0 auto;
+  	background-color: #FFF;
+  	padding: 20px 40px;
+  	border: solid 1px black;
+  	margin-top: 20px;
+	height:450px;
+	width:80%;
+}
