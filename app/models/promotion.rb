@@ -27,7 +27,7 @@ class Promotion < ActiveRecord::Base
       "<key>"+"adresse"+"</key>"+
       "<string>"+self.adresse+"</string>"+
       "<key>"+"photo"+"</key>"+
-      "<string>"+self.photo.url+"</string>"+
+      "<string>"+self.photo.url(:thumb)+"</string>"+
   "</dict>"
   end
   
