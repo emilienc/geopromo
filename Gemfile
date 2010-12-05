@@ -8,7 +8,7 @@ gem 'devise'#authentication
 gem "acts_as_geocodable" #Geocoding
 gem 'plist' #to exchange with iphones
 gem 'paperclip'
-gem 'paperclipftp' #useful to upload photos
+gem 'paperclipftp',:git=>'https://github.com/tomfarm/paperclipftp.git' #useful to upload photos via ftp 
 
 
 

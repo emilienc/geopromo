@@ -2,13 +2,16 @@ development:
    host: ftp.drivehq.com
    username: luchog
    password: gonzales
+   passive: true
 
 test:
    host: ftp.drivehq.com
    username: luchog
    password: gonzales
+   passive: true
 
 production:
    host: ftp.drivehq.com
    username: luchog
    password: gonzales
+   passive: true
