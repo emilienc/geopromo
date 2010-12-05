@@ -1,12 +1,26 @@
 
 module ApplicationHelper
+  
+  def image_ftp(url,options)
+    content_tag(:img,nil,:src=>url,:alt=>options[:alt],:width=>options[:width],:height=>options[:height])
+  end
+  
+  def html
+    "Visit my #{link_to("website", "http://paulsturgess.co.uk")}"
+  end
+  
+  
   def add_marker(markers)
       ret = ""
+     
       markers.each_with_index do |m,index|
+      img = image_ftp(m.photo.url,:width=>"40",:height=>"40")
+     
       ret += "
+      
           var infiwindow#{index.to_s} = new google.maps.InfoWindow(
           {
-            content: '#{m.adresse}'
+            content: '<a>toto</a>'
 
           });
           var marker#{index.to_s}= new google.maps.Marker({

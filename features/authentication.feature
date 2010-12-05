@@ -10,7 +10,7 @@ Scenario: Creating a new account
     And I fill in "user_email" with "user@domain.com"
     And I fill in "user_password" with "password"
     And I fill in "user_password_confirmation" with "password"
-    And I press "Sign up"
+    And I press "Enregistrement"
     Then I should see "Signed in as"
 
 Scenario: Sign in

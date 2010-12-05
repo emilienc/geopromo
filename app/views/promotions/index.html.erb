@@ -4,12 +4,16 @@
 
 
 <% title "Promotions" %>
+
+<div id="map"></div>  
+
 <table>
   <tr>
     <th>User</th>
     <th>Description</th>
     <th>Debut</th>
     <th>Fin</th>
+	<th>Photo</th>
   </tr>
   <% for promotion in @promotions %>
     <tr>
@@ -20,6 +24,7 @@
 	  <td><%= promotion.geocode.longitude %></td>
       <td><%= promotion.debut %></td>
       <td><%= promotion.fin %></td>
+	  <td><%= image_ftp(promotion.photo.url,:width=>"40",:height=>"40")%></td>
       <td><%= link_to "Show", promotion %></td>
       <td><%= link_to "Edit", edit_promotion_path(promotion) %></td>
       <td><%= link_to "Destroy", promotion, :confirm => 'Are you sure?', :method => :delete %></td>

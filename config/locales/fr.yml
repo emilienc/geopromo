@@ -1,0 +1,11 @@
+fr:
+ email: "email"
+ password: "Mot de passe"
+ password_confirmation: "Confirmation du mot de passe"
+ welcome:  "Bienvenue sur Geopromo"
+ register: "Enregistrement"
+ logout: "Deconnexion"
+ login: "Connexion"
+ signup: "Enregistrement"
+ current_password: "Ancien mot de passe"
+ remember_me: "Se souvenir de moi"

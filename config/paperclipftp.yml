@@ -1,0 +1,14 @@
+development:
+   host: ftp.drivehq.com
+   username: luchog
+   password: gonzales
+
+test:
+   host: ftp.drivehq.com
+   username: luchog
+   password: gonzales
+
+production:
+   host: ftp.drivehq.com
+   username: luchog
+   password: gonzales

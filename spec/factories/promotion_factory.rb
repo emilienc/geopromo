@@ -1,11 +1,12 @@
 
-Factory.define :promotion do |promotion|
-  promotion.description      { Factory.next(:description) }
-  promotion.street           { Factory.next(:street) }
-  promotion.locality         { Factory.next(:locality) }
-  promotion.postal_code      { Factory.next(:postal_code) }
-  promotion.country          { "France" }
-  promotion.association :user, :factory => :user
+Factory.define :promotion do |promo|
+  promo.description      { Factory.next(:description) }
+  promo.street           { Factory.next(:street) }
+  promo.locality         { Factory.next(:locality) }
+  promo.postal_code      { Factory.next(:postal_code) }
+  promo.country          { "France" }
+  promo.association      :user, :factory => :user
+  promo.photo_file_name        "spec/support/rails.png"  
 end
 
 Factory.sequence :description do |n|

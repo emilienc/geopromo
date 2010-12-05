@@ -10,5 +10,5 @@ Given /^I am authenticated$/ do
   And %{I go to login}
   And %{I fill in "user_email" with "#{@user.email}"}
   And %{I fill in "user_password" with "#{@user.password}"}
-  And %{I press "Sign in"}
+  And %{I press "Connexion"}
 end

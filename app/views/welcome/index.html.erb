@@ -1,21 +1,3 @@
 <%=render :partial=>'promotions/map'%>
-<h1>Bienvenue sur Geopromo</h1>
-
-<h2>Les dernières promotions</h2>
-<table>
-  <tr>
-    
-    <th>Description</th>
-    <th>Debut</th>
-    <th>Fin</th>
-  </tr>
-  <% for promotion in @promotions %>
-    <tr>
-      
-      <td><%= promotion.description %></td>
-      <td><%= promotion.debut %></td>
-      <td><%= promotion.fin %></td>
-      
-    </tr>
-  <% end %>
-</table>
+<h1><%=t(:welcome)%></h1>
+<div id="map"></div>  

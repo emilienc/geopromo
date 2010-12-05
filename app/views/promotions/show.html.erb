@@ -30,6 +30,12 @@
 </p>
 
 <p>
+  <strong>Photo:</strong>
+  <%= image_ftp(@promotion.photo.url)%>
+</p>
+
+
+<p>
   <%= link_to "Edit", edit_promotion_path(@promotion) %> |
   <%= link_to "Destroy", @promotion, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", promotions_path %>

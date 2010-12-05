@@ -14,12 +14,12 @@ Scenario: connexion
   Given I am not authenticated
   When I go to the login page
   Then I should see "Connexion"
-  Then I should see "Mot de Passe"
+  Then I should see "Mot de passe"
   Then I should see "Enregistrement"
 
 Scenario: enregistrement
   Given I am not authenticated
   When I go to the register page
   Then I should see "Enregistrement"
-  Then I should see "Mot de Passe"
+  Then I should see "Mot de passe"
   Then I should see "Confirmation du mot de passe"

@@ -1,12 +1,14 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-#gem 'sqlite3-ruby', :require => 'sqlite3'
-#gem 'mysql2'
-gem 'pg', '=0.9.0'
-gem 'devise'
-gem "acts_as_geocodable"
-gem 'plist'
+
+
+gem 'pg', '=0.9.0' #database supporting geoloc 
+gem 'devise'#authentication
+gem "acts_as_geocodable" #Geocoding
+gem 'plist' #to exchange with iphones
+gem 'paperclip'
+gem 'paperclipftp' #useful to upload photos
 
 
 

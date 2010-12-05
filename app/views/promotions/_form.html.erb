@@ -1,16 +1,16 @@
-<%= form_for @promotion do |f| %>
+<%= form_for @promotion, :html => { :multipart => true }  do |f| %>
   <%= f.error_messages %>
   
   <p>
-    <%= f.label :description %><br />
+    <%= f.label 'description' %><br />
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.label :rue %><br />
+    <%= f.label 'rue' %><br />
     <%= f.text_field :street %>
   </p>
   <p>
-    <%= f.label :ville %><br />
+    <%= f.label 'ville' %><br />
     <%= f.text_field :locality %>
   </p>
   <p>
@@ -18,16 +18,21 @@
     <%= f.text_field :postal_code %>
   </p>
 <p>
-    <%= f.label :pays %><br />
+    <%= f.label 'pays' %><br />
     <%= f.text_field :country %>
   </p>
+
  <p>
-    <%= f.label 'début' %><br />
-    <%= f.date_select :debut %>
+   <%= f.label 'debut' %><br />
+   
   </p>
  <p>
-    <%= f.label 'fin' %><br />
-    <%= f.date_select :fin %>
+   <%= f.label 'fin' %><br />
+   
   </p>
+  <p>  
+      <%= f.label "Photo" %>  
+      <%= f.file_field :photo %>  
+  <p>
   <p><%= f.submit %></p>
 <% end %>
